@@ -234,7 +234,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             justify-content: center;
             color: var(--text-light);
             font-size: 14px;
-<<<<<<< HEAD
             overflow: hidden;
             position: relative;
         }
@@ -244,8 +243,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             height: 100%;
             object-fit: contain;
             padding: 10px;
-=======
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-info {
@@ -442,11 +439,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <?php if (file_exists('img/logo2.png')): ?>
-                    <img src="img/logo2.png" alt="CLIMAXA" class="logo">
-                <?php else: ?>
-                    <h2 style="font-size: 18px;">CLIMAXA</h2>
-                <?php endif; ?>
+                <?php 
+                if (file_exists('img/logo2.png')) {
+                    echo '<img src="img/logo2.png" alt="CLIMAXA" class="logo">';
+                } else {
+                    echo '<h2 style="font-size: 18px;">CLIMAXA</h2>';
+                }
+                ?>
             </div>
             
             <div class="nav-search">
@@ -491,15 +490,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Productos existentes del dashboard -->
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto1.png')): ?>
-                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto1.png')) {
+                        echo '<img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -512,15 +509,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto2.png')): ?>
-                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto2.png')) {
+                        echo '<img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">AirMax</div>
@@ -533,15 +528,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto3.png')): ?>
-                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto3.png')) {
+                        echo '<img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -555,15 +548,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Productos adicionales -->
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto4.png')): ?>
-                        <img src="img/producto4.png" alt="Aire Acondicionado Samsung 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto4.png')) {
+                        echo '<img src="img/producto4.png" alt="Aire Acondicionado Samsung 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">SAMSUNG</div>
@@ -576,15 +567,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto5.png')): ?>
-                        <img src="img/producto5.png" alt="Aire Acondicionado LG 18,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto5.png')) {
+                        echo '<img src="img/producto5.png" alt="Aire Acondicionado LG 18,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">LG</div>
@@ -597,15 +586,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto6.png')): ?>
-                        <img src="img/producto6.png" alt="Aire Acondicionado TCL 24,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
+                    <?php
+                    if (file_exists('img/producto6.png')) {
+                        echo '<img src="img/producto6.png" alt="Aire Acondicionado TCL 24,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">TCL</div>
@@ -645,7 +632,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     const productPrice = productCard.querySelector('.product-price').textContent;
                     const productBrand = productCard.querySelector('.product-brand').textContent;
                     
-                    alert(`Agregado al carrito: ${productBrand} - ${productName} - ${productPrice}`);
+                    alert('Agregado al carrito: ' + productBrand + ' - ' + productName + ' - ' + productPrice);
                     
                     const originalText = this.textContent;
                     this.textContent = '✓ Agregado';
