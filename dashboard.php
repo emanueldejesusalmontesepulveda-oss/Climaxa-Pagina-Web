@@ -66,8 +66,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         }
 
         .logo {
-            max-width: 55px; /* Reducido al 50% (de 110px a 55px) */
-            height: auto;
+            width: 80px; /* Tamaño fijo 80x50px */
+            height: 50px;
+            object-fit: contain;
             transform: translateY(3px);
         }
 
@@ -198,12 +199,93 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             font-size: 16px;
         }
 
-        /* Products Grid */
+        /* Section Titles */
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 50px 0 20px 0;
+            color: var(--text-dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* Categories Buttons Section */
+        .categories-buttons {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .categories-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .category-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .category-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+        }
+
+        .category-image {
+            width: 100%;
+            max-width: 250px;
+            height: 180px;
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Products Grid - 3 columnas fijas */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .product-card {
@@ -228,6 +310,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             justify-content: center;
             color: var(--text-light);
             font-size: 14px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .product-info {
@@ -279,118 +368,90 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             background: var(--primary-dark);
         }
 
-        /* Categories Section */
-        .categories-section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .category-card {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
+        /* Botón Ver Más */
+        .view-more-container {
             text-align: center;
+            margin: 30px 0 50px 0;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
             transition: all 0.3s;
+            border: none;
             cursor: pointer;
         }
 
-        .category-card:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
+        .view-more-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
         }
 
-        .category-icon {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .category-name {
-            font-weight: 500;
-        }
-
-        /* Sección de servicios */
-        .services-section {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .services-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--text-dark);
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        .services-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
+        /* Service Card Styles */
         .service-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
             box-shadow: var(--shadow);
-            transition: transform 0.3s;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding: 30px 20px;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .service-card h3 {
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
             color: var(--text-dark);
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
         }
 
-        .service-card p {
+        .service-description {
+            font-size: 14px;
             color: var(--text-light);
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
             line-height: 1.5;
         }
 
-        .btn-details {
-            display: inline-block;
-            background-color: var(--primary);
+        .service-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .service-btn {
+            background: var(--primary);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            font-size: 0.85rem;
-            transition: background-color 0.3s;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
         }
 
-        .btn-details:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .divider {
-            height: 1px;
-            background-color: var(--border);
-            margin: 1rem 0;
+        .service-btn:hover {
+            background: var(--primary-dark);
         }
 
         /* Footer */
@@ -447,7 +508,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             }
             
             .logo {
-                max-width: 50px;
+                width: 70px;
+                height: 45px;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -469,16 +540,25 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             }
             
             .logo {
-                max-width: 45px;
+                width: 60px;
+                height: 40px;
             }
             
             .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
+                grid-template-columns: 1fr;
             }
             
             .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .category-button {
+                max-width: 300px;
+            }
+
+            .category-image {
+                max-width: 300px;
             }
         }
 
@@ -496,21 +576,23 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             }
             
             .logo {
-                max-width: 40px;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
+                width: 50px;
+                height: 35px;
             }
             
             .footer-links {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
+            }
+
+            .categories-buttons {
+                padding: 30px 20px;
+            }
+
+            .category-button {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
     </style>
@@ -523,7 +605,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <?php if (file_exists('img/logo2.png')): ?>
                     <img src="img/logo2.png" alt="CLIMAXA" class="logo">
                 <?php else: ?>
-                    <h2 style="font-size: 20px;">CLIMAXA</h2>
+                    <h2 style="font-size: 18px;">CLIMAXA</h2>
                 <?php endif; ?>
             </div>
             
@@ -538,7 +620,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="#" class="nav-link">Aires acondicionados</a>
                 <a href="#" class="nav-link">Freezers</a>
                 <a href="#" class="nav-link">Neveras</a>
-                <a href="#nuestros-servicios" class="nav-link">Servicios</a>
+                <a href="#" class="nav-link">Servicios</a>
             </div>
             
             <div class="nav-actions">
@@ -556,37 +638,75 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <!-- Main Content -->
     <div class="main-content">
         <h1 class="page-title">Descubre todos nuestros productos</h1>
-        <p class="page-subtitle">Ven y prueba la calidad de todos nuestros aires acondicionados, freezers y neveras.</p>
+        <p class="page-subtitle">Ven y prueba la calidad de todos nuestros aires acondicionados, freezers, neveras y servicios técnicos.</p>
 
-        <!-- Categories Section -->
-        <div class="categories-section">
-            <h2 class="section-title">Categorías Principales</h2>
+        <!-- Categories Buttons Section -->
+        <div class="categories-buttons">
+            <h2 class="categories-title">Explora Nuestras Categorías</h2>
             <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">❄️</div>
-                    <div class="category-name">Aires Acondicionados</div>
+                <!-- Aires Acondicionados -->
+                <div class="category-item">
+                    <button class="category-button" data-category="aires">
+                        Ver Aires Acondicionados
+                    </button>
+                    <div class="category-image">
+                        <?php if (file_exists('img/producto1.png')): ?>
+                            <img src="img/producto1.png" alt="Aire Acondicionado">
+                        <?php else: ?>
+                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                                <i class="fas fa-snowflake" style="font-size: 48px;"></i>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🧊</div>
-                    <div class="category-name">Freezers</div>
+
+                <!-- Freezers -->
+                <div class="category-item">
+                    <button class="category-button" data-category="freezers">
+                        Ver Freezers
+                    </button>
+                    <div class="category-image">
+                        <?php if (file_exists('img/freezer1.png')): ?>
+                            <img src="img/freezer1.png" alt="Freezer">
+                        <?php else: ?>
+                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                                <i class="fas fa-icicles" style="font-size: 48px;"></i>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🍎</div>
-                    <div class="category-name">Neveras</div>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🔧</div>
-                    <div class="category-name">Servicios</div>
+
+                <!-- Neveras -->
+                <div class="category-item">
+                    <button class="category-button" data-category="neveras">
+                        Ver Neveras
+                    </button>
+                    <div class="category-image">
+                        <?php if (file_exists('img/nevera1.png')): ?>
+                            <img src="img/nevera1.png" alt="Nevera">
+                        <?php else: ?>
+                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                                <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Products Grid -->
+        <!-- Sección de Aires Acondicionados -->
+        <h2 class="section-title" id="aires-section">Aires Acondicionados</h2>
         <div class="products-grid">
             <!-- Producto 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    [Imagen del Producto]
+                    <?php if (file_exists('img/producto1.png')): ?>
+                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -600,7 +720,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Producto 2 -->
             <div class="product-card">
                 <div class="product-image">
-                    [Imagen del Producto]
+                    <?php if (file_exists('img/producto2.png')): ?>
+                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">AirMax</div>
@@ -614,7 +740,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Producto 3 -->
             <div class="product-card">
                 <div class="product-image">
-                    [Imagen del Producto]
+                    <?php if (file_exists('img/producto3.png')): ?>
+                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -624,49 +756,181 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
+        </div>
 
-            <!-- Producto 4 -->
+        <!-- Botón Ver Más para Aires -->
+        <div class="view-more-container">
+            <a href="aires.php" class="view-more-btn">Ver Más Aires Acondicionados</a>
+        </div>
+
+        <!-- Sección de Freezers -->
+        <h2 class="section-title" id="freezers-section">Freezers</h2>
+        <div class="products-grid">
+            <!-- Freezer 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    [Imagen del Producto]
+                    <?php if (file_exists('img/freezer1.png')): ?>
+                        <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">AirMax</div>
-                    <h3 class="product-name">Aire Acondicionado Green Inverter 12,000 BTU - 22 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 208 SEER</div>
-                    <div class="product-price">RD$28,900</div>
+                    <div class="product-brand">MABE</div>
+                    <h3 class="product-name">Freezer Vertical Mabe 5.5 Pies Cúbicos Plateado</h3>
+                    <div class="product-specs">Capacidad: 5.5 pies³ • Tecnología No Frost</div>
+                    <div class="product-price">RD$18,500</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Freezer 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/freezer2.png')): ?>
+                        <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">INDURAMA</div>
+                    <h3 class="product-name">Freezer Horizontal Indurama 7 Pies Cúbicos Blanco</h3>
+                    <div class="product-specs">Capacidad: 7 pies³ • Caja Fuerte Fría</div>
+                    <div class="product-price">RD$22,300</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Freezer 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/freezer3.png')): ?>
+                        <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-name">Freezer Vertical LG 6.2 Pies Cúbicos Inverter</h3>
+                    <div class="product-specs">Capacidad: 6.2 pies³ • Linear Inverter • No Frost</div>
+                    <div class="product-price">RD$25,800</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
         </div>
 
-        <!-- Sección de servicios -->
-        <section id="nuestros-servicios" class="services-section">
-            <h2 class="services-title">Nuestros Servicios</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <h3>Diagnóstico y Evaluación de Aire Acondicionado</h3>
-                    <p>Nuestro servicio de diagnóstico y evaluación de aire acondicionado permite identificar problemas que afectan el rendimiento de su equipo. Realizamos pruebas de presión, medición de temperatura y análisis de consumo energético para ofrecerle la mejor solución.</p>
-                    <a href="#" class="btn-details">Ver Detalles</a>
+        <!-- Botón Ver Más para Freezers -->
+        <div class="view-more-container">
+            <a href="freezers.php" class="view-more-btn">Ver Más Freezers</a>
+        </div>
+
+        <!-- Sección de Neveras -->
+        <h2 class="section-title" id="neveras-section">Neveras</h2>
+        <div class="products-grid">
+            <!-- Nevera 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera1.png')): ?>
+                        <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                
-                <div class="divider"></div>
-                
-                <div class="service-card">
-                    <h3>Instalación Básica de Aire Acondicionado 12K-18K BTU</h3>
-                    <p>Nuestro servicio de instalación básica de aire acondicionado tipo split (12,000 y 18,000 BTU) incluye montaje de unidad interior y exterior, conexión eléctrica, instalación de línea de drenaje y prueba de funcionamiento. Garantía de 6 meses en la instalación.</p>
-                    <a href="#" class="btn-details">Ver Detalles</a>
-                </div>
-                
-                <div class="divider"></div>
-                
-                <div class="service-card">
-                    <h3>Instalación Básica de Aire Acondicionado 24,000 BTU</h3>
-                    <p>Servicio de instalación básica de aire acondicionado split de 24,000 BTU. Incluye los materiales de instalación, soportes, tuberías de cobre, cableado y accesorios necesarios. Realizamos la evacuación de aire y carga de refrigerante según especificaciones del fabricante.</p>
-                    <a href="#" class="btn-details">Ver Detalles</a>
+                <div class="product-info">
+                    <div class="product-brand">MABE</div>
+                    <h3 class="product-name">Nevera Mabe 18 Pies Cúbicos French Door</h3>
+                    <div class="product-specs">Capacidad: 18 pies³ • Dispensador de Agua • No Frost</div>
+                    <div class="product-price">RD$45,900</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
-        </section>
+
+            <!-- Nevera 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera2.png')): ?>
+                        <img src="img/nevera2.png" alt="Nevera LG 20 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">LG</div>
+                    <h3 class="product-name">Nevera LG 20 Pies Cúbicos InstaView Door</h3>
+                    <div class="product-specs">Capacidad: 20 pies³ • Linear Inverter • InstaView</div>
+                    <div class="product-price">RD$62,500</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Nevera 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera3.png')): ?>
+                        <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies" style="width: 100%; height: 100%; object-fit: cover;">
+                    <?php else: ?>
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
+                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-name">Nevera Samsung 19 Pies Family Hub</h3>
+                    <div class="product-specs">Capacidad: 19 pies³ • Digital Inverter • Family Hub</div>
+                    <div class="product-price">RD$58,700</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón Ver Más para Neveras -->
+        <div class="view-more-container">
+            <a href="neveras.php" class="view-more-btn">Ver Más Neveras</a>
+        </div>
+
+        <!-- Sección de Servicios -->
+        <h2 class="section-title" id="servicios-section">Servicios Técnicos</h2>
+        <div class="products-grid">
+            <!-- Servicio 1 -->
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3 class="service-name">Instalación Profesional</h3>
+                <p class="service-description">Instalación profesional de aires acondicionados, freezers y neveras por técnicos certificados.</p>
+                <div class="service-price">RD$2,500+</div>
+                <button class="service-btn">Solicitar Servicio</button>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3 class="service-name">Mantenimiento Preventivo</h3>
+                <p class="service-description">Limpieza y mantenimiento completo para optimizar el rendimiento de tus equipos.</p>
+                <div class="service-price">RD$1,800+</div>
+                <button class="service-btn">Solicitar Servicio</button>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-name">Reparación de Emergencia</h3>
+                <p class="service-description">Servicio de reparación urgente las 24 horas para fallas críticas en tus equipos.</p>
+                <div class="service-price">RD$3,500+</div>
+                <button class="service-btn">Solicitar Servicio</button>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="dashboard-footer">
@@ -679,7 +943,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <a href="#">Colaborado</a>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2025 CLIMAXA. Todos los derechos reservados.</p>
+                    <p>&copy; 2024 CLIMAXA. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>
@@ -695,11 +959,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     const productCard = this.closest('.product-card');
                     const productName = productCard.querySelector('.product-name').textContent;
                     const productPrice = productCard.querySelector('.product-price').textContent;
+                    const productBrand = productCard.querySelector('.product-brand').textContent;
                     
-                    // Aquí puedes agregar la lógica para añadir al carrito
-                    alert(`Agregado al carrito: ${productName} - ${productPrice}`);
+                    alert(`Agregado al carrito: ${productBrand} - ${productName} - ${productPrice}`);
                     
-                    // Cambiar temporalmente el texto del botón
                     const originalText = this.textContent;
                     this.textContent = '✓ Agregado';
                     this.style.background = '#2ecc71';
@@ -711,42 +974,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 });
             });
 
-            // Buscar productos
-            const searchInput = document.querySelector('.nav-search input');
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                const productCards = document.querySelectorAll('.product-card');
-                
-                productCards.forEach(card => {
-                    const productName = card.querySelector('.product-name').textContent.toLowerCase();
-                    const productBrand = card.querySelector('.product-brand').textContent.toLowerCase();
+            // Solicitar servicios
+            const serviceButtons = document.querySelectorAll('.service-btn');
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const serviceCard = this.closest('.service-card');
+                    const serviceName = serviceCard.querySelector('.service-name').textContent;
+                    const servicePrice = serviceCard.querySelector('.service-price').textContent;
                     
-                    if (productName.includes(searchTerm) || productBrand.includes(searchTerm)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-
-            // Navegación por categorías
-            const categoryCards = document.querySelectorAll('.category-card');
-            categoryCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const categoryName = this.querySelector('.category-name').textContent;
-                    alert(`Navegando a: ${categoryName}`);
-                    // Aquí puedes agregar la lógica para filtrar productos por categoría
-                });
-            });
-            
-            // Navegación suave al hacer clic en el enlace de servicios
-            document.querySelector('a[href="#nuestros-servicios"]').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector('#nuestros-servicios').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    alert(`Servicio solicitado: ${serviceName} - ${servicePrice}`);
+                    
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Solicitado';
+                    this.style.background = '#2ecc71';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText
