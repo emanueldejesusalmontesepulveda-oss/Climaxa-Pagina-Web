@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aires Acondicionados - CLIMAXA</title>
+    <title>Freezers - CLIMAXA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -234,7 +234,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             justify-content: center;
             color: var(--text-light);
             font-size: 14px;
-<<<<<<< HEAD
             overflow: hidden;
             position: relative;
         }
@@ -244,8 +243,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             height: 100%;
             object-fit: contain;
             padding: 10px;
-=======
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-info {
@@ -452,13 +449,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="nav-search">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Buscar aires acondicionados...">
+                    <input type="text" placeholder="Buscar freezers...">
                 </div>
             </div>
             
             <div class="nav-links">
-                <a href="#" class="nav-link active">Aires acondicionados</a>
-                <a href="freezers.php" class="nav-link">Freezers</a>
+                <a href="aires.php" class="nav-link">Aires acondicionados</a>
+                <a href="#" class="nav-link active">Freezers</a>
                 <a href="neveras.php" class="nav-link">Neveras</a>
                 <a href="dashboard.php" class="nav-link">Servicios</a>
             </div>
@@ -484,134 +481,110 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </a>
         </div>
 
-        <h1 class="page-title">Aires Acondicionados</h1>
-        <p class="page-subtitle">Descubre nuestra amplia gama de aires acondicionados de las mejores marcas.</p>
+        <h1 class="page-title">Freezers</h1>
+        <p class="page-subtitle">Encuentra el freezer perfecto para tus necesidades de almacenamiento y conservación.</p>
 
         <div class="products-grid">
-            <!-- Productos existentes del dashboard -->
+            <!-- Freezers existentes del dashboard -->
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto1.png')): ?>
-                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">
+                    <?php if (file_exists('img/freezer1.png')): ?>
+                        <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen del Freezer]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">GREE</div>
-                    <h3 class="product-name">Aire Acondicionado Gree Inverter 12,000 BTU - 22 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 228 SEER</div>
-                    <div class="product-price">RD$28,900</div>
+                    <div class="product-brand">MABE</div>
+                    <h3 class="product-name">Freezer Vertical Mabe 5.5 Pies Cúbicos Plateado</h3>
+                    <div class="product-specs">Capacidad: 5.5 pies³ • Tecnología No Frost</div>
+                    <div class="product-price">RD$18,500</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto2.png')): ?>
-                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">
+                    <?php if (file_exists('img/freezer2.png')): ?>
+                        <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen del Freezer]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">AirMax</div>
-                    <h3 class="product-name">Aire Acondicionado AirMax 12,000 BTU Inverter 21 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 167 SEER</div>
-                    <div class="product-price">RD$27,200</div>
+                    <div class="product-brand">INDURAMA</div>
+                    <h3 class="product-name">Freezer Horizontal Indurama 7 Pies Cúbicos Blanco</h3>
+                    <div class="product-specs">Capacidad: 7 pies³ • Caja Fuerte Fría</div>
+                    <div class="product-price">RD$22,300</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto3.png')): ?>
-                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">
+                    <?php if (file_exists('img/freezer3.png')): ?>
+                        <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen del Freezer]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">GREE</div>
-                    <h3 class="product-name">Aire Acondicionado Gree Inverter 12,000 BTU - 22 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 208 SEER</div>
-                    <div class="product-price">RD$28,900</div>
-                    <button class="add-to-cart">Agregar al carrito</button>
-                </div>
-            </div>
-
-            <!-- Productos adicionales -->
-            <div class="product-card">
-                <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto4.png')): ?>
-                        <img src="img/producto4.png" alt="Aire Acondicionado Samsung 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">SAMSUNG</div>
-                    <h3 class="product-name">Aire Acondicionado Samsung Wind-Free 12,000 BTU</h3>
-                    <div class="product-specs">Tecnología Wind-Free • 22 SEER • WiFi</div>
-                    <div class="product-price">RD$31,500</div>
-                    <button class="add-to-cart">Agregar al carrito</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto5.png')): ?>
-                        <img src="img/producto5.png" alt="Aire Acondicionado LG 18,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
                     <div class="product-brand">LG</div>
-                    <h3 class="product-name">Aire Acondicionado LG Dual Inverter 18,000 BTU</h3>
-                    <div class="product-specs">Dual Inverter • 24 SEER • Plasmaster</div>
-                    <div class="product-price">RD$35,800</div>
+                    <h3 class="product-name">Freezer Vertical LG 6.2 Pies Cúbicos Inverter</h3>
+                    <div class="product-specs">Capacidad: 6.2 pies³ • Linear Inverter • No Frost</div>
+                    <div class="product-price">RD$25,800</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Freezers adicionales -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/freezer4.png')): ?>
+                        <img src="img/freezer4.png" alt="Freezer Samsung 8 Pies">
+                    <?php else: ?>
+                        [Imagen del Freezer]
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-name">Freezer Vertical Samsung 8 Pies Digital Inverter</h3>
+                    <div class="product-specs">Capacidad: 8 pies³ • Digital Inverter • No Frost</div>
+                    <div class="product-price">RD$29,900</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto6.png')): ?>
-                        <img src="img/producto6.png" alt="Aire Acondicionado TCL 24,000 BTU">
+                    <?php if (file_exists('img/freezer5.png')): ?>
+                        <img src="img/freezer5.png" alt="Freezer Whirlpool 6.5 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen del Freezer]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">TCL</div>
-                    <h3 class="product-name">Aire Acondicionado TCL Inverter 24,000 BTU</h3>
-                    <div class="product-specs">24,000 BTU • Inverter • WiFi • 20 SEER</div>
-                    <div class="product-price">RD$42,300</div>
+                    <div class="product-brand">WHIRLPOOL</div>
+                    <h3 class="product-name">Freezer Vertical Whirlpool 6.5 Pies Cúbicos</h3>
+                    <div class="product-specs">Capacidad: 6.5 pies³ • Control Digital • No Frost</div>
+                    <div class="product-price">RD$23,700</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/freezer6.png')): ?>
+                        <img src="img/freezer6.png" alt="Freezer Mabe 10 Pies Horizontal">
+                    <?php else: ?>
+                        [Imagen del Freezer]
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">MABE</div>
+                    <h3 class="product-name">Freezer Horizontal Mabe 10 Pies Cúbicos</h3>
+                    <div class="product-specs">Capacidad: 10 pies³ • Caja Fuerte • Alta Eficiencia</div>
+                    <div class="product-price">RD$27,500</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
@@ -658,7 +631,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 });
             });
 
-            // Buscar productos específicos de aires
+            // Buscar productos específicos de freezers
             const searchInput = document.querySelector('.nav-search input');
             searchInput.addEventListener('input', function() {
                 const searchTerm = this.value.toLowerCase();

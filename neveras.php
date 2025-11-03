@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aires Acondicionados - CLIMAXA</title>
+    <title>Neveras - CLIMAXA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -234,7 +234,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             justify-content: center;
             color: var(--text-light);
             font-size: 14px;
-<<<<<<< HEAD
             overflow: hidden;
             position: relative;
         }
@@ -244,8 +243,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             height: 100%;
             object-fit: contain;
             padding: 10px;
-=======
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-info {
@@ -452,14 +449,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="nav-search">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Buscar aires acondicionados...">
+                    <input type="text" placeholder="Buscar neveras...">
                 </div>
             </div>
             
             <div class="nav-links">
-                <a href="#" class="nav-link active">Aires acondicionados</a>
+                <a href="aires.php" class="nav-link">Aires acondicionados</a>
                 <a href="freezers.php" class="nav-link">Freezers</a>
-                <a href="neveras.php" class="nav-link">Neveras</a>
+                <a href="#" class="nav-link active">Neveras</a>
                 <a href="dashboard.php" class="nav-link">Servicios</a>
             </div>
             
@@ -484,134 +481,110 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </a>
         </div>
 
-        <h1 class="page-title">Aires Acondicionados</h1>
-        <p class="page-subtitle">Descubre nuestra amplia gama de aires acondicionados de las mejores marcas.</p>
+        <h1 class="page-title">Neveras</h1>
+        <p class="page-subtitle">Descubre nuestra colección de neveras con la última tecnología para tu hogar.</p>
 
         <div class="products-grid">
-            <!-- Productos existentes del dashboard -->
+            <!-- Neveras existentes del dashboard -->
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto1.png')): ?>
-                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">
+                    <?php if (file_exists('img/nevera1.png')): ?>
+                        <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen de la Nevera]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">GREE</div>
-                    <h3 class="product-name">Aire Acondicionado Gree Inverter 12,000 BTU - 22 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 228 SEER</div>
-                    <div class="product-price">RD$28,900</div>
+                    <div class="product-brand">MABE</div>
+                    <h3 class="product-name">Nevera Mabe 18 Pies Cúbicos French Door</h3>
+                    <div class="product-specs">Capacidad: 18 pies³ • Dispensador de Agua • No Frost</div>
+                    <div class="product-price">RD$45,900</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto2.png')): ?>
-                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">
+                    <?php if (file_exists('img/nevera2.png')): ?>
+                        <img src="img/nevera2.png" alt="Nevera LG 20 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen de la Nevera]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">AirMax</div>
-                    <h3 class="product-name">Aire Acondicionado AirMax 12,000 BTU Inverter 21 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 167 SEER</div>
-                    <div class="product-price">RD$27,200</div>
-                    <button class="add-to-cart">Agregar al carrito</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto3.png')): ?>
-                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">GREE</div>
-                    <h3 class="product-name">Aire Acondicionado Gree Inverter 12,000 BTU - 22 SEER WIFI</h3>
-                    <div class="product-specs">108 BTU 208 SEER</div>
-                    <div class="product-price">RD$28,900</div>
-                    <button class="add-to-cart">Agregar al carrito</button>
-                </div>
-            </div>
-
-            <!-- Productos adicionales -->
-            <div class="product-card">
-                <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto4.png')): ?>
-                        <img src="img/producto4.png" alt="Aire Acondicionado Samsung 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">SAMSUNG</div>
-                    <h3 class="product-name">Aire Acondicionado Samsung Wind-Free 12,000 BTU</h3>
-                    <div class="product-specs">Tecnología Wind-Free • 22 SEER • WiFi</div>
-                    <div class="product-price">RD$31,500</div>
-                    <button class="add-to-cart">Agregar al carrito</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto5.png')): ?>
-                        <img src="img/producto5.png" alt="Aire Acondicionado LG 18,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-                    <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
                     <div class="product-brand">LG</div>
-                    <h3 class="product-name">Aire Acondicionado LG Dual Inverter 18,000 BTU</h3>
-                    <div class="product-specs">Dual Inverter • 24 SEER • Plasmaster</div>
-                    <div class="product-price">RD$35,800</div>
+                    <h3 class="product-name">Nevera LG 20 Pies Cúbicos InstaView Door</h3>
+                    <div class="product-specs">Capacidad: 20 pies³ • Linear Inverter • InstaView</div>
+                    <div class="product-price">RD$62,500</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image">
-<<<<<<< HEAD
-                    <?php if (file_exists('img/producto6.png')): ?>
-                        <img src="img/producto6.png" alt="Aire Acondicionado TCL 24,000 BTU">
+                    <?php if (file_exists('img/nevera3.png')): ?>
+                        <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies">
                     <?php else: ?>
-                        [Imagen del Aire Acondicionado]
+                        [Imagen de la Nevera]
                     <?php endif; ?>
-=======
-                    [Imagen del Aire Acondicionado]
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                 </div>
                 <div class="product-info">
-                    <div class="product-brand">TCL</div>
-                    <h3 class="product-name">Aire Acondicionado TCL Inverter 24,000 BTU</h3>
-                    <div class="product-specs">24,000 BTU • Inverter • WiFi • 20 SEER</div>
-                    <div class="product-price">RD$42,300</div>
+                    <div class="product-brand">SAMSUNG</div>
+                    <h3 class="product-name">Nevera Samsung 19 Pies Family Hub</h3>
+                    <div class="product-specs">Capacidad: 19 pies³ • Digital Inverter • Family Hub</div>
+                    <div class="product-price">RD$58,700</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Neveras adicionales -->
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera4.png')): ?>
+                        <img src="img/nevera4.png" alt="Nevera Whirlpool 16 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">WHIRLPOOL</div>
+                    <h3 class="product-name">Nevera Whirlpool 16 Pies Cúbicos Side by Side</h3>
+                    <div class="product-specs">Capacidad: 16 pies³ • Dispensador de Hielo • No Frost</div>
+                    <div class="product-price">RD$38,900</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera5.png')): ?>
+                        <img src="img/nevera5.png" alt="Nevera Indurama 14 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">INDURAMA</div>
+                    <h3 class="product-name">Nevera Indurama 14 Pies Cúbicos Dos Puertas</h3>
+                    <div class="product-specs">Capacidad: 14 pies³ • Eficiencia A+ • Congelador Superior</div>
+                    <div class="product-price">RD$32,500</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <?php if (file_exists('img/nevera6.png')): ?>
+                        <img src="img/nevera6.png" alt="Nevera Haier 22 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+                    <?php endif; ?>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">HAIER</div>
+                    <h3 class="product-name">Nevera Haier 22 Pies French Door con Pantalla Táctil</h3>
+                    <div class="product-specs">Capacidad: 22 pies³ • Pantalla Táctil • WiFi • No Frost</div>
+                    <div class="product-price">RD$68,900</div>
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
@@ -658,7 +631,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 });
             });
 
-            // Buscar productos específicos de aires
+            // Buscar productos específicos de neveras
             const searchInput = document.querySelector('.nav-search input');
             searchInput.addEventListener('input', function() {
                 const searchTerm = this.value.toLowerCase();

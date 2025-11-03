@@ -66,7 +66,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         }
 
         .logo {
+<<<<<<< HEAD
+            width: 80px;
+=======
             width: 80px; /* Tamaño fijo 80x50px */
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
             height: 50px;
             object-fit: contain;
             transform: translateY(3px);
@@ -272,12 +276,21 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             color: var(--text-light);
             font-size: 14px;
             overflow: hidden;
+<<<<<<< HEAD
+            position: relative;
+=======
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .category-image img {
             width: 100%;
             height: 100%;
+<<<<<<< HEAD
+            object-fit: contain;
+            padding: 10px;
+=======
             object-fit: cover;
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         /* Products Grid - 3 columnas fijas */
@@ -311,12 +324,21 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             color: var(--text-light);
             font-size: 14px;
             overflow: hidden;
+<<<<<<< HEAD
+            position: relative;
+=======
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
+<<<<<<< HEAD
+            object-fit: contain;
+            padding: 10px;
+=======
             object-fit: cover;
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-info {
@@ -653,9 +675,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         <?php if (file_exists('img/producto1.png')): ?>
                             <img src="img/producto1.png" alt="Aire Acondicionado">
                         <?php else: ?>
+<<<<<<< HEAD
+                            <?php if (file_exists('img/aire-ejemplo.jpg')): ?>
+                                <img src="img/aire-ejemplo.jpg" alt="Aire Acondicionado">
+                            <?php else: ?>
+                                [Imagen de Aire Acondicionado]
+                            <?php endif; ?>
+=======
                             <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                                 <i class="fas fa-snowflake" style="font-size: 48px;"></i>
                             </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                         <?php endif; ?>
                     </div>
                 </div>
@@ -669,9 +699,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         <?php if (file_exists('img/freezer1.png')): ?>
                             <img src="img/freezer1.png" alt="Freezer">
                         <?php else: ?>
+<<<<<<< HEAD
+                            <?php if (file_exists('img/freezer-ejemplo.jpg')): ?>
+                                <img src="img/freezer-ejemplo.jpg" alt="Freezer">
+                            <?php else: ?>
+                                [Imagen de Freezer]
+                            <?php endif; ?>
+=======
                             <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                                 <i class="fas fa-icicles" style="font-size: 48px;"></i>
                             </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                         <?php endif; ?>
                     </div>
                 </div>
@@ -685,9 +723,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         <?php if (file_exists('img/nevera1.png')): ?>
                             <img src="img/nevera1.png" alt="Nevera">
                         <?php else: ?>
+<<<<<<< HEAD
+                            <?php if (file_exists('img/nevera-ejemplo.jpg')): ?>
+                                <img src="img/nevera-ejemplo.jpg" alt="Nevera">
+                            <?php else: ?>
+                                [Imagen de Nevera]
+                            <?php endif; ?>
+=======
                             <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                                 <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
                             </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                         <?php endif; ?>
                     </div>
                 </div>
@@ -701,11 +747,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/producto1.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">
+                    <?php else: ?>
+                        [Imagen del Aire Acondicionado]
+=======
                         <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-snowflake" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -721,11 +773,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/producto2.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">
+                    <?php else: ?>
+                        [Imagen del Aire Acondicionado]
+=======
                         <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-snowflake" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -741,11 +799,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/producto3.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">
+                    <?php else: ?>
+                        [Imagen del Aire Acondicionado]
+=======
                         <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-snowflake" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -770,11 +834,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/freezer1.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies">
+                    <?php else: ?>
+                        [Imagen del Freezer]
+=======
                         <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-icicles" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -790,11 +860,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/freezer2.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies">
+                    <?php else: ?>
+                        [Imagen del Freezer]
+=======
                         <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-icicles" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -810,11 +886,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/freezer3.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies">
+                    <?php else: ?>
+                        [Imagen del Freezer]
+=======
                         <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-icicles" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -839,11 +921,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/nevera1.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+=======
                         <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -859,11 +947,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/nevera2.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/nevera2.png" alt="Nevera LG 20 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+=======
                         <img src="img/nevera2.png" alt="Nevera LG 20 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -879,11 +973,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div class="product-card">
                 <div class="product-image">
                     <?php if (file_exists('img/nevera3.png')): ?>
+<<<<<<< HEAD
+                        <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies">
+                    <?php else: ?>
+                        [Imagen de la Nevera]
+=======
                         <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies" style="width: 100%; height: 100%; object-fit: cover;">
                     <?php else: ?>
                         <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
                             <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
                         </div>
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
                     <?php endif; ?>
                 </div>
                 <div class="product-info">
@@ -981,6 +1081,99 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     const serviceCard = this.closest('.service-card');
                     const serviceName = serviceCard.querySelector('.service-name').textContent;
                     const servicePrice = serviceCard.querySelector('.service-price').textContent;
+<<<<<<< HEAD
+                    
+                    alert(`Servicio solicitado: ${serviceName} - ${servicePrice}`);
+                    
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Solicitado';
+                    this.style.background = '#2ecc71';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                    }, 2000);
+                });
+            });
+
+            // Botones de categorías
+            const categoryButtons = document.querySelectorAll('.category-button');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    let targetSection;
+                    
+                    if (category === 'aires') {
+                        targetSection = document.getElementById('aires-section');
+                    } else if (category === 'freezers') {
+                        targetSection = document.getElementById('freezers-section');
+                    } else if (category === 'neveras') {
+                        targetSection = document.getElementById('neveras-section');
+                    }
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Buscar productos
+            const searchInput = document.querySelector('.nav-search input');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const productCards = document.querySelectorAll('.product-card');
+                const serviceCards = document.querySelectorAll('.service-card');
+                
+                productCards.forEach(card => {
+                    const productName = card.querySelector('.product-name').textContent.toLowerCase();
+                    const productBrand = card.querySelector('.product-brand').textContent.toLowerCase();
+                    
+                    if (productName.includes(searchTerm) || productBrand.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                serviceCards.forEach(card => {
+                    const serviceName = card.querySelector('.service-name').textContent.toLowerCase();
+                    
+                    if (serviceName.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            // Navegación por enlaces de la barra
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const linkText = this.textContent;
+                    
+                    let targetSection;
+                    if (linkText.includes('Aires')) {
+                        targetSection = document.getElementById('aires-section');
+                    } else if (linkText.includes('Freezers')) {
+                        targetSection = document.getElementById('freezers-section');
+                    } else if (linkText.includes('Neveras')) {
+                        targetSection = document.getElementById('neveras-section');
+                    } else if (linkText.includes('Servicios')) {
+                        targetSection = document.getElementById('servicios-section');
+                    }
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+=======
                     
                     alert(`Servicio solicitado: ${serviceName} - ${servicePrice}`);
                     
@@ -990,3 +1183,4 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     
                     setTimeout(() => {
                         this.textContent = originalText
+>>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
