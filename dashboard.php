@@ -66,11 +66,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         }
 
         .logo {
-<<<<<<< HEAD
             width: 80px;
-=======
-            width: 80px; /* Tamaño fijo 80x50px */
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
             height: 50px;
             object-fit: contain;
             transform: translateY(3px);
@@ -276,21 +272,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             color: var(--text-light);
             font-size: 14px;
             overflow: hidden;
-<<<<<<< HEAD
             position: relative;
-=======
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .category-image img {
             width: 100%;
             height: 100%;
-<<<<<<< HEAD
             object-fit: contain;
             padding: 10px;
-=======
-            object-fit: cover;
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         /* Products Grid - 3 columnas fijas */
@@ -324,21 +313,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             color: var(--text-light);
             font-size: 14px;
             overflow: hidden;
-<<<<<<< HEAD
             position: relative;
-=======
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
-<<<<<<< HEAD
             object-fit: contain;
             padding: 10px;
-=======
-            object-fit: cover;
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
         }
 
         .product-info {
@@ -624,11 +606,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <?php if (file_exists('img/logo2.png')): ?>
-                    <img src="img/logo2.png" alt="CLIMAXA" class="logo">
-                <?php else: ?>
-                    <h2 style="font-size: 18px;">CLIMAXA</h2>
-                <?php endif; ?>
+                <?php 
+                if (file_exists('img/logo2.png')) {
+                    echo '<img src="img/logo2.png" alt="CLIMAXA" class="logo">';
+                } else {
+                    echo '<h2 style="font-size: 18px;">CLIMAXA</h2>';
+                }
+                ?>
             </div>
             
             <div class="nav-search">
@@ -672,21 +656,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         Ver Aires Acondicionados
                     </button>
                     <div class="category-image">
-                        <?php if (file_exists('img/producto1.png')): ?>
-                            <img src="img/producto1.png" alt="Aire Acondicionado">
-                        <?php else: ?>
-<<<<<<< HEAD
-                            <?php if (file_exists('img/aire-ejemplo.jpg')): ?>
-                                <img src="img/aire-ejemplo.jpg" alt="Aire Acondicionado">
-                            <?php else: ?>
-                                [Imagen de Aire Acondicionado]
-                            <?php endif; ?>
-=======
-                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                                <i class="fas fa-snowflake" style="font-size: 48px;"></i>
-                            </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                        <?php endif; ?>
+                        <?php
+                        if (file_exists('img/producto1.png')) {
+                            echo '<img src="img/producto1.png" alt="Aire Acondicionado">';
+                        } elseif (file_exists('img/aire-ejemplo.jpg')) {
+                            echo '<img src="img/aire-ejemplo.jpg" alt="Aire Acondicionado">';
+                        } else {
+                            echo '[Imagen de Aire Acondicionado]';
+                        }
+                        ?>
                     </div>
                 </div>
 
@@ -696,21 +674,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         Ver Freezers
                     </button>
                     <div class="category-image">
-                        <?php if (file_exists('img/freezer1.png')): ?>
-                            <img src="img/freezer1.png" alt="Freezer">
-                        <?php else: ?>
-<<<<<<< HEAD
-                            <?php if (file_exists('img/freezer-ejemplo.jpg')): ?>
-                                <img src="img/freezer-ejemplo.jpg" alt="Freezer">
-                            <?php else: ?>
-                                [Imagen de Freezer]
-                            <?php endif; ?>
-=======
-                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                                <i class="fas fa-icicles" style="font-size: 48px;"></i>
-                            </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                        <?php endif; ?>
+                        <?php
+                        if (file_exists('img/freezer1.png')) {
+                            echo '<img src="img/freezer1.png" alt="Freezer">';
+                        } elseif (file_exists('img/freezer-ejemplo.jpg')) {
+                            echo '<img src="img/freezer-ejemplo.jpg" alt="Freezer">';
+                        } else {
+                            echo '[Imagen de Freezer]';
+                        }
+                        ?>
                     </div>
                 </div>
 
@@ -720,21 +692,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         Ver Neveras
                     </button>
                     <div class="category-image">
-                        <?php if (file_exists('img/nevera1.png')): ?>
-                            <img src="img/nevera1.png" alt="Nevera">
-                        <?php else: ?>
-<<<<<<< HEAD
-                            <?php if (file_exists('img/nevera-ejemplo.jpg')): ?>
-                                <img src="img/nevera-ejemplo.jpg" alt="Nevera">
-                            <?php else: ?>
-                                [Imagen de Nevera]
-                            <?php endif; ?>
-=======
-                            <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                                <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
-                            </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                        <?php endif; ?>
+                        <?php
+                        if (file_exists('img/nevera1.png')) {
+                            echo '<img src="img/nevera1.png" alt="Nevera">';
+                        } elseif (file_exists('img/nevera-ejemplo.jpg')) {
+                            echo '<img src="img/nevera-ejemplo.jpg" alt="Nevera">';
+                        } else {
+                            echo '[Imagen de Nevera]';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -746,19 +712,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Producto 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/producto1.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-=======
-                        <img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/producto1.png')) {
+                        echo '<img src="img/producto1.png" alt="Aire Acondicionado Gree 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -772,19 +732,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Producto 2 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/producto2.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-=======
-                        <img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/producto2.png')) {
+                        echo '<img src="img/producto2.png" alt="Aire Acondicionado AirMax 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">AirMax</div>
@@ -798,19 +752,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Producto 3 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/producto3.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">
-                    <?php else: ?>
-                        [Imagen del Aire Acondicionado]
-=======
-                        <img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-snowflake" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/producto3.png')) {
+                        echo '<img src="img/producto3.png" alt="Aire Acondicionado Gree 12,000 BTU">';
+                    } else {
+                        echo '[Imagen del Aire Acondicionado]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">GREE</div>
@@ -833,19 +781,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Freezer 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/freezer1.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies">
-                    <?php else: ?>
-                        [Imagen del Freezer]
-=======
-                        <img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/freezer1.png')) {
+                        echo '<img src="img/freezer1.png" alt="Freezer Mabe 5.5 Pies">';
+                    } else {
+                        echo '[Imagen del Freezer]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">MABE</div>
@@ -859,19 +801,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Freezer 2 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/freezer2.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies">
-                    <?php else: ?>
-                        [Imagen del Freezer]
-=======
-                        <img src="img/freezer2.png" alt="Freezer Indurama 7 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/freezer2.png')) {
+                        echo '<img src="img/freezer2.png" alt="Freezer Indurama 7 Pies">';
+                    } else {
+                        echo '[Imagen del Freezer]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">INDURAMA</div>
@@ -885,19 +821,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Freezer 3 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/freezer3.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies">
-                    <?php else: ?>
-                        [Imagen del Freezer]
-=======
-                        <img src="img/freezer3.png" alt="Freezer LG 6.2 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-icicles" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/freezer3.png')) {
+                        echo '<img src="img/freezer3.png" alt="Freezer LG 6.2 Pies">';
+                    } else {
+                        echo '[Imagen del Freezer]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">LG</div>
@@ -920,19 +850,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Nevera 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/nevera1.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies">
-                    <?php else: ?>
-                        [Imagen de la Nevera]
-=======
-                        <img src="img/nevera1.png" alt="Nevera Mabe 18 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/nevera1.png')) {
+                        echo '<img src="img/nevera1.png" alt="Nevera Mabe 18 Pies">';
+                    } else {
+                        echo '[Imagen de la Nevera]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">MABE</div>
@@ -946,19 +870,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Nevera 2 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/nevera2.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/nevera2.png" alt="Nevera LG 20 Pies">
-                    <?php else: ?>
-                        [Imagen de la Nevera]
-=======
-                        <img src="img/nevera2.png" alt="Nevera LG 20 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/nevera2.png')) {
+                        echo '<img src="img/nevera2.png" alt="Nevera LG 20 Pies">';
+                    } else {
+                        echo '[Imagen de la Nevera]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">LG</div>
@@ -972,19 +890,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- Nevera 3 -->
             <div class="product-card">
                 <div class="product-image">
-                    <?php if (file_exists('img/nevera3.png')): ?>
-<<<<<<< HEAD
-                        <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies">
-                    <?php else: ?>
-                        [Imagen de la Nevera]
-=======
-                        <img src="img/nevera3.png" alt="Nevera Samsung 19 Pies" style="width: 100%; height: 100%; object-fit: cover;">
-                    <?php else: ?>
-                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f0f0f0; color: #666;">
-                            <i class="fas fa-refrigerator" style="font-size: 48px;"></i>
-                        </div>
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
-                    <?php endif; ?>
+                    <?php
+                    if (file_exists('img/nevera3.png')) {
+                        echo '<img src="img/nevera3.png" alt="Nevera Samsung 19 Pies">';
+                    } else {
+                        echo '[Imagen de la Nevera]';
+                    }
+                    ?>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">SAMSUNG</div>
@@ -1061,7 +973,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     const productPrice = productCard.querySelector('.product-price').textContent;
                     const productBrand = productCard.querySelector('.product-brand').textContent;
                     
-                    alert(`Agregado al carrito: ${productBrand} - ${productName} - ${productPrice}`);
+                    alert('Agregado al carrito: ' + productBrand + ' - ' + productName + ' - ' + productPrice);
                     
                     const originalText = this.textContent;
                     this.textContent = '✓ Agregado';
@@ -1081,9 +993,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     const serviceCard = this.closest('.service-card');
                     const serviceName = serviceCard.querySelector('.service-name').textContent;
                     const servicePrice = serviceCard.querySelector('.service-price').textContent;
-<<<<<<< HEAD
                     
-                    alert(`Servicio solicitado: ${serviceName} - ${servicePrice}`);
+                    alert('Servicio solicitado: ' + serviceName + ' - ' + servicePrice);
                     
                     const originalText = this.textContent;
                     this.textContent = '✓ Solicitado';
@@ -1173,14 +1084,3 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </script>
 </body>
 </html>
-=======
-                    
-                    alert(`Servicio solicitado: ${serviceName} - ${servicePrice}`);
-                    
-                    const originalText = this.textContent;
-                    this.textContent = '✓ Solicitado';
-                    this.style.background = '#2ecc71';
-                    
-                    setTimeout(() => {
-                        this.textContent = originalText
->>>>>>> d30f07e50e9cec95238c9ce59d8d0409857b05e6
